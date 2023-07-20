@@ -21,30 +21,29 @@ formElement.addEventListener("submit", (event) => {
 
     switch (currency) {
         case "EUR":
-            rate = amount * rateEUR;
-            courseElement.innerText = ` 1 ${currency} = ${rateEUR} PLN`;
+            rate = rateEUR;
             break;
 
         case "USD":
-            rate = amount * rateUSD;
-            courseElement.innerText = ` 1 ${currency} = ${rateUSD} PLN`;
+            rate = rateUSD;
             break;
 
         case "GBP":
-            rate = amount * rateGBP;
-            courseElement.innerText = ` 1 ${currency} = ${rateGBP} PLN`;
+            rate = rateGBP;
             break;
 
         case "CHF":
-            rate = amount * rateCHF;
-            courseElement.innerText = ` 1 ${currency} = ${rateCHF} PLN`;
+            rate = rateCHF;
             break;
 
         case "AUD":
-            rate = amount * rateAUD;
-            courseElement.innerText = ` 1 ${currency} = ${rateAUD} PLN`;
+            rate = rateAUD;
             break;
     }
+
+    let result = amount * rate;
     
-    resultElement.innerHTML = ` <strong>${rate.toFixed(2)}</strong>`;
+    courseElement.innerText = `1 ${currency} = ${rate} PLN`;
+    resultElement.innerHTML = ` <strong>${result.toFixed(2)}</strong>`;
+
 });
