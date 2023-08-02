@@ -1,49 +1,81 @@
-console.log("Hello!");
+{
+    const calculateResult = (amount, currency) => {
+        const rateEUR = 4.42;
+        const rateUSD = 4.06;
+        const rateGBP = 5.15;
+        const rateCHF = 4.53;
+        const rateAUD = 2.71;
 
-let formElement = document.querySelector(".js-form");
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let courseElement = document.querySelector(".js-course");
-let resultElement = document.querySelector(".js-result");
+        switch (currency) {
+            case "EUR":
+                return amount * rateEUR;
 
-let rateEUR = 4.42;
-let rateUSD = 4.06;
-let rateGBP = 5.15;
-let rateCHF = 4.53;
-let rateAUD = 2.71;
+            case "USD":
+                return amount * rateUSD;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+            case "GBP":
+                return amount * rateGBP;
 
-    let amount = +amountElement.value;
-    let currency = currencyElement.value;
-    let rate;
+            case "CHF":
+                return amount * rateCHF;
 
-    switch (currency) {
-        case "EUR":
-            rate = rateEUR;
-            break;
-
-        case "USD":
-            rate = rateUSD;
-            break;
-
-        case "GBP":
-            rate = rateGBP;
-            break;
-
-        case "CHF":
-            rate = rateCHF;
-            break;
-
-        case "AUD":
-            rate = rateAUD;
-            break;
+            case "AUD":
+                return amount * rateAUD;
+        }
     }
 
-    let result = amount * rate;
-    
-    courseElement.innerText = `1 ${currency} = ${rate} PLN`;
-    resultElement.innerHTML = ` <strong>${result.toFixed(2)}</strong>`;
+    const calculateRate = (currency) => {
+        const rateEUR = 4.42;
+        const rateUSD = 4.06;
+        const rateGBP = 5.15;
+        const rateCHF = 4.53;
+        const rateAUD = 2.71;
 
-});
+        switch (currency) {
+            case "EUR":
+                return rateEUR;
+
+            case "USD":
+                return rateUSD;
+
+            case "GBP":
+                return rateGBP;
+
+            case "CHF":
+                return rateCHF;
+
+            case "AUD":
+                return rateAUD;
+        }
+    }
+
+    const updateResultText = (result, currency, rate) => {
+        const courseElement = document.querySelector(".js-course");
+        const resultElement = document.querySelector(".js-result");
+        courseElement.innerText = `1 ${currency} = ${rate} PLN`;
+        resultElement.innerHTML = ` <strong>${result.toFixed(2)}</strong>`;
+    };
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
+
+        const rate = calculateRate(currency);
+        const result = calculateResult(amount, currency);
+
+        updateResultText(result, currency, rate);
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
+    };
+
+    init();
+}
