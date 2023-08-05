@@ -15,8 +15,8 @@ The subject of the project is currency converter. The calculator allows you to c
 This website depicts a currency converter. It is very easy to use. In the first gap you have to enter the amount of money. Afterwords you can choose one of five currencies. After clicking the button you will see current rate of choosen currency, given in PLN. Under the button you will get amount of converted money to PLN. 
 
 ## Technologies Used
-- HTML5
-- CSS3
+- HTML 5
+- CSS 3
 - JavaScript
 
 ## Gif
