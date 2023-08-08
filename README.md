@@ -1,5 +1,5 @@
 # Currency Converter
-The subject of the project is currency converter. The calculator allows you to convert any amount in the selected currency into polish currency. <br>Here is a working live demo : https://anna-wojcik.github.io/Currency-converter/
+The subject of the project is currency converter. The calculator allows you to convert any amount in the selected currency into polish currency. <br>Here is a working live demo : https://anna-wojcik.github.io/Currency-Converter/
  
 ## Table of Contents
 * [Description](#description)
