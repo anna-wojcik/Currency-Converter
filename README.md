@@ -1,4 +1,4 @@
-# Currency converter
+# Currency Converter
 The subject of the project is currency converter. The calculator allows you to convert any amount in the selected currency into polish currency. <br>Here is a working live demo : https://anna-wojcik.github.io/Currency-converter/
  
 ## Table of Contents
@@ -20,7 +20,7 @@ This website depicts a currency converter. It is very easy to use. In the first 
 - JavaScript
 
 ## Gif
-![currencyConverter](https://github.com/anna-wojcik/Currency-converter/assets/139044927/8acd46da-caac-4d03-a723-f0d4ba35bd09)
+![currencyConverter3](https://github.com/anna-wojcik/Currency-converter/assets/139044927/4cc6f6e3-d1f7-49f8-a11e-b52f321909ab)
 
 ## Project Status
 Project is in progress and it is the result of learning programming.
