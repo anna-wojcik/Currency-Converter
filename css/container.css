@@ -1,5 +1,5 @@
 .container {
-    max-width: 600px;
-    padding: 0 20px;
-    margin: 40px auto;
+    flex-basis: 700px;
+    padding: 40px;
+    margin: 20px;
 }
