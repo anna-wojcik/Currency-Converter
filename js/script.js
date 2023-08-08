@@ -1,29 +1,4 @@
 {
-    const calculateResult = (amount, currency) => {
-        const rateEUR = 4.42;
-        const rateUSD = 4.06;
-        const rateGBP = 5.15;
-        const rateCHF = 4.53;
-        const rateAUD = 2.71;
-
-        switch (currency) {
-            case "EUR":
-                return amount * rateEUR;
-
-            case "USD":
-                return amount * rateUSD;
-
-            case "GBP":
-                return amount * rateGBP;
-
-            case "CHF":
-                return amount * rateCHF;
-
-            case "AUD":
-                return amount * rateAUD;
-        }
-    }
-
     const calculateRate = (currency) => {
         const rateEUR = 4.42;
         const rateUSD = 4.06;
@@ -66,7 +41,7 @@
         const currency = currencyElement.value;
 
         const rate = calculateRate(currency);
-        const result = calculateResult(amount, currency);
+        const result = amount * rate;
 
         updateResultText(result, currency, rate);
     };
