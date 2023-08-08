@@ -1,9 +1,10 @@
 .form__fieldset {
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     margin: 20px 0;
-    background-color: hsla(0, 0%, 100%, 0.836);
+    background-color: white;
+    box-shadow: 0 0 30px black;
 }
 
 .form__legend {
